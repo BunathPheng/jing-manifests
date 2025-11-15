@@ -1,8 +1,8 @@
 namespace: smartops-api
 
 image:
-  imageRepository:1
-  tag: 1
+  imageRepository: docker.io/phengbunath/jing
+  tag: 2
 
 service:
   type: ClusterIP
