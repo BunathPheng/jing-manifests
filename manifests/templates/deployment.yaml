@@ -1,0 +1,24 @@
+---
+# Source: helm for kubernetes/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jing
+  labels:
+    app: jing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jing
+  template:
+    metadata:
+      labels:
+        app: jing
+    spec:
+      containers:
+        - name: jing
+          image: docker.io/phengbunath/jing:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
